@@ -132,7 +132,7 @@ jquery.fancytree@2.*:
   resolved "https://registry.yarnpkg.com/jquery.fancytree/-/jquery.fancytree-2.38.4.tgz#377599e76e76047a1e50debe00be4658fa003396"
   integrity sha512-f4Fv5jZiZ6pBml/9txcJRAQDZpqQGGoJ8BUbicZKcO4CpgGbqBX9W7eQFwEaKQS0bxdVBLbqWQ9RoUK05ON2kQ==
 
-jquery@*, "jquery@1.8 - 4", jquery@3.*, jquery@>=1.10, jquery@>=1.12.0, jquery@>=1.7, jquery@>=1.7.x, jquery@>=1.8:
+jquery@*, "jquery@1.8 - 4", jquery@3.*, jquery@>=1.10, jquery@>=1.12.0, jquery@>=1.7, jquery@>=1.7.x:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
   integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
@@ -147,10 +147,10 @@ moment@2.*, moment@^2.9.0:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.30.1.tgz#f8c91c07b7a786e30c59926df530b4eac96974ae"
   integrity sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==
 
-nouislider@14.*:
-  version "14.7.0"
-  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-14.7.0.tgz#a71db0587c92567b6da1df57d251d3696d942362"
-  integrity sha512-4RtQ1+LHJKesDCNJrXkQcwXAWCrC2aggdLYMstS/G5fEWL+fXZbUA9pwVNHFghMGuFGRATlDLNInRaPeRKzpFQ==
+nouislider@15.*:
+  version "15.8.1"
+  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-15.8.1.tgz#18729ed29738d2d328a1b5e0429d38eb8be8a696"
+  integrity sha512-93TweAi8kqntHJSPiSWQ1o/uZ29VWOmal9YKb6KKGGlCkugaNfAupT7o1qTHqdJvNQ7S0su5rO6qRFCjP8fxtw==
 
 pe7-icon@1.*:
   version "1.0.4"
@@ -187,17 +187,15 @@ slick-carousel@1.*:
   resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
   integrity sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
 
-smartwizard@4.*:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/smartwizard/-/smartwizard-4.4.1.tgz#4107314c3167c82db86fae77daeca05c84d72c3f"
-  integrity sha512-tSvrRi+QA3Tha26wwhLUZF/rgyyebzg9nndlG45i66JeI+q0CmpP97W9X6+re6tApB9YSPH3wREf40gt06xPqQ==
+smartwizard@6.*:
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/smartwizard/-/smartwizard-6.0.6.tgz#1582552d482c9c77d149a1febecd6915c5df4b5d"
+  integrity sha512-avdXqjgoMGsP2AqHhOPTZ8HYqz1yv3ceb+xOGGgJNCaWiEHdCiySbBQivzDL+XfeDP4xkyTAJVcf+zy8FlM1WQ==
 
-textarea-autosize@0.*:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/textarea-autosize/-/textarea-autosize-0.4.2.tgz#f2fb0263b27fb4e7cf67abfe6e51f3cd712720cf"
-  integrity sha512-a56O2ByoIrJUw2MFK0PSpLLIkVI/lXjjdnekO0xUIafTR/+sM1iPe3jnjPJfWqHJCKvmUqChbdHNXBklnnZbvg==
-  dependencies:
-    jquery ">=1.8"
+textarea-autosize@1.*:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/textarea-autosize/-/textarea-autosize-1.0.0.tgz#46dc14b27501a82225a35886599150419f39d670"
+  integrity sha512-ZsoRhzZdXvRE5wDSBToIwVtQTZs/bzBcXDQ2IGBXK+f+RX5OaQn2Oki/a6myfamy0a+w+MmjmoxJWVNdeo2uWQ==
 
 toastr@2.*:
   version "2.1.4"
