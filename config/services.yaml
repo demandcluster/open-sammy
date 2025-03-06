@@ -135,6 +135,12 @@ services :
     tags :
       - { name : 'twig.extension' }
 
+  App\EventListener\LocaleListener :
+    arguments :
+      $defaultLocale: 'en'
+    tags :
+      - { name: kernel.event_subscriber }
+
 
   Doctrine\Migrations\DependencyFactory :
     alias : doctrine.migrations.dependency_factory

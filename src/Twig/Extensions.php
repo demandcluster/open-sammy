@@ -65,6 +65,7 @@ class Extensions extends AbstractExtension
             new TwigFilter('parseDateString', [$this, 'parseDateString']),
             new TwigFilter('dateTimeToUserSettings', [$this, 'dateTimeToUserSettings']),
             new TwigFilter('formatScore', [$this, 'formatScore']),
+            new TwigFilter('json_decode', $this->json_decode(...)),
         ];
     }
 
@@ -358,5 +359,16 @@ class Extensions extends AbstractExtension
     public function getLastImprovementStage(AssessmentStream $assessmentStream): ?\App\Entity\Improvement
     {
         return $assessmentStream->getLastImprovementStage();
+    }
+
+    public function json_decode($jsonString): mixed
+    {
+        $decoded = [];
+        try {
+            $decoded = json_decode($jsonString, true, 512, JSON_THROW_ON_ERROR);
+        } catch (\JsonException) {
+        }
+
+        return $decoded;
     }
 }

@@ -361,48 +361,48 @@ application :
         =50 {No aplica}
         other {No especificado}
       }
-  organization_domain : Dominio de la organización
-  organization_role_error : Hubo un error al configurar tu rol en la organización
-  edit_roles : Editar roles
-  details_button : Ver y modificar información del usuario
-  details_title : Detalles del usuario {user}
-  manage_roles_title : Cambiar roles
-  manage_roles_description : Selecciona los roles deseados y haz clic en el botón de guardar
-  projects : Alcances
-  group : Equipo
-  groups : Equipos
-  edit_group : Cambiar equipo
-  edit_projects : Editar alcance
-  manage_projects_title : Alcance asignado
-  manage_projects_description : Asigna un alcance a este usuario. Ten en cuenta que el rol de usuario es global y no puede definirse por alcance.
-  project_edit_success : Los alcances se han guardado correctamente
-  user_edit_success : El usuario se ha guardado correctamente
-  assignments : "Asignaciones"
-  active_assignments : "Asignaciones abiertas"
-  bad_groups : Grupos no válidos proporcionados
-  date_format : Formato de fecha
-  time_zone : Zona horaria
-  date_format_not_selected : No seleccionado
-  time_zone_not_selected : No seleccionado
-  import_title : Importar nuevos usuarios
-  import_title_text : Al crear un usuario, este recibirá inmediatamente un correo electrónico de invitación a SAMMY con sus datos de inicio de sesión.
-  import_button : Importar
-  import_bad_mime_type : Archivo no válido
-  import_file_too_large : El archivo es demasiado grande
-  download_import_template : Descargar plantilla
-  import_zero_sheets : No se proporcionaron hojas
-  import_success : Se importaron un total de «{users}» usuarios
-  import_wrong_roles : Roles incorrectos
-  import_users_button : Importar usuarios desde Excel
-  import_users_part_of_group : Los usuarios importados formarán parte del grupo «{group}»
-  import_users_no_group : Los usuarios importados no tendrán grupo
-  required_property : Propiedad requerida
-  import_too_many_cols : Se proporcionaron demasiadas columnas
-  export_users_button : Exportar usuarios a Excel
-  export_error : Ocurrió un error durante la exportación
-  total_users : Número total de usuarios
-  search_by_placeholder : Buscar por Nombre
-  roles_change_warning : 'Ten en cuenta que si cambias tus roles, deberás volver a autenticarte'
+    organization_domain : Dominio de la organización
+    organization_role_error : Hubo un error al configurar tu rol en la organización
+    edit_roles : Editar roles
+    details_button : Ver y modificar información del usuario
+    details_title : Detalles del usuario {user}
+    manage_roles_title : Cambiar roles
+    manage_roles_description : Selecciona los roles deseados y haz clic en el botón de guardar
+    projects : Alcances
+    group : Equipo
+    groups : Equipos
+    edit_group : Cambiar equipo
+    edit_projects : Editar alcance
+    manage_projects_title : Alcance asignado
+    manage_projects_description : Asigna un alcance a este usuario. Ten en cuenta que el rol de usuario es global y no puede definirse por alcance.
+    project_edit_success : Los alcances se han guardado correctamente
+    user_edit_success : El usuario se ha guardado correctamente
+    assignments : "Asignaciones"
+    active_assignments : "Asignaciones abiertas"
+    bad_groups : Grupos no válidos proporcionados
+    date_format : Formato de fecha
+    time_zone : Zona horaria
+    date_format_not_selected : No seleccionado
+    time_zone_not_selected : No seleccionado
+    import_title : Importar nuevos usuarios
+    import_title_text : Al crear un usuario, este recibirá inmediatamente un correo electrónico de invitación a SAMMY con sus datos de inicio de sesión.
+    import_button : Importar
+    import_bad_mime_type : Archivo no válido
+    import_file_too_large : El archivo es demasiado grande
+    download_import_template : Descargar plantilla
+    import_zero_sheets : No se proporcionaron hojas
+    import_success : Se importaron un total de «{users}» usuarios
+    import_wrong_roles : Roles incorrectos
+    import_users_button : Importar usuarios desde Excel
+    import_users_part_of_group : Los usuarios importados formarán parte del grupo «{group}»
+    import_users_no_group : Los usuarios importados no tendrán grupo
+    required_property : Propiedad requerida
+    import_too_many_cols : Se proporcionaron demasiadas columnas
+    export_users_button : Exportar usuarios a Excel
+    export_error : Ocurrió un error durante la exportación
+    total_users : Número total de usuarios
+    search_by_placeholder : Buscar por Nombre
+    roles_change_warning : 'Ten en cuenta que si cambias tus roles, deberás volver a autenticarte'
 
   session :
     modal_title : Tu sesión ha expirado
@@ -612,7 +612,7 @@ application :
   stream :
     submit : Finalizar la evaluación y enviar para validación
     retract-submission : Retirar envío del flujo
-    restricted_view : Vista restringida: no tienes el rol adecuado para trabajar en este flujo
+    restricted_view : 'Vista restringida: no tienes el rol adecuado para trabajar en este flujo'
     validation_skipped_zero : Se respondieron las tres preguntas con "No", por lo que se omitió el paso de validación.
     validation_skipped_threshold : "Se omitió el paso de validación porque la puntuación no supera el umbral de validación ({threshold}<sup>*</sup>) para este ámbito. <br> * Puedes cambiar este valor en el menú \"Gestionar ámbitos\"."
     evidence_empty : No se ha subido documentación para este flujo.
@@ -655,3 +655,7 @@ application :
     validated_by : "Validado por {name}"
     improved_by : "Mejorado por {name}"
     auto_validated : "Validado automáticamente"
+
+  language:
+    language_change_success: "El idioma ha sido cambiado exitosamente"
+    language_change_error: "Hubo un error al cambiar el idioma"
