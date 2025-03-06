@@ -655,3 +655,7 @@ application :
     validated_by : "Validated by {name}"
     improved_by : "Improved by {name}"
     auto_validated : "Auto validated"
+
+  language:
+    language_change_success: "The language has been successfully changed"
+    language_change_error: "There was an error while changing the language"
