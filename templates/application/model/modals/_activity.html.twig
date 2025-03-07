@@ -50,13 +50,13 @@
                                         {% for remark in remarks %}
                                             {% if remark.maturityLevelRemarks | length == 0 %}
                                                 <p>
-                                                    {{ remark.text|default("")|sanitize_html("liberal_sanitizer") }}
+                                                    {{ remark.text|default("") }}
                                                 </p>
                                             {% else %}
                                                 {% for maturityLevelRemark in remark.maturityLevelRemarks %}
                                                     {% if maturityLevelRemark.maturityLevel.level == level %}
                                                         <p>
-                                                            {{ remark.text|default("")|sanitize_html("liberal_sanitizer") }}
+                                                            {{ remark.text|default("") }}
                                                         </p>
                                                     {% endif %}
                                                 {% endfor %}

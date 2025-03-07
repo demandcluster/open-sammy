@@ -11,6 +11,7 @@ use App\Enum\Role;
 use App\Repository\MailingRepository;
 use App\Repository\MailTemplateRepository;
 use App\Service\MailingService;
+use App\Service\SanitizerService;
 use App\Tests\_support\AbstractKernelTestCase;
 use App\Tests\EntityManagerTestCase;
 use Psr\Log\LoggerInterface;
@@ -73,6 +74,7 @@ class MailingServiceTest extends AbstractKernelTestCase
             self::getContainer()->get(LoggerInterface::class),
             self::getContainer()->get(Filesystem::class),
             self::getContainer()->get(MailTemplateRepository::class),
+            self::getContainer()->get(SanitizerService::class),
         ])->onlyMethods(['sendMail'])->getMock();
         $mailingServiceMock->expects(self::any())->method('sendMail')->will(self::returnValue(true));
 

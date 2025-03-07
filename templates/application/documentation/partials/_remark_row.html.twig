@@ -33,10 +33,7 @@
 
             <span class="remark-text">
                 {{ remark.text }}
-{#            {{ generateTooltipPreviewForLinks(#}
-{#                remark.text|default("")|sanitize_html("liberal_sanitizer")#}
-{#            ) }}#}
-        </span>
+            </span>
             {% if remark.type == constant('App\\Enum\\Custom\\RemarkType::VALIDATION') %}
                 <small class="text-muted">
                     ({{ "application.assessment.validation_remark_documentation"|trans({}, 'application')|lower }})

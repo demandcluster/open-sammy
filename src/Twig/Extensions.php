@@ -91,17 +91,6 @@ class Extensions extends AbstractExtension
             new TwigFunction('filterFields', [$this, 'filterFields']),
             new TwigFunction('getConfig', [$this, 'getConfig']),
             new TwigFunction('getMaxMaturityLevels', [$this, 'getMaxMaturityLevels']),
-            new TwigFunction(
-                'generateTooltipPreviewForLinks',
-                [
-                    $this,
-                    'generateTooltipPreviewForLinks',
-                ],
-                [
-                    'is_safe' => ['html'],
-                    'needs_environment' => true,
-                ]
-            ),
             new TwigFunction('getThemeStyleForMetamodel', [$this, 'getThemeStyleForMetamodel']),
             new TwigFunction("getDomainHostName", [$this, 'getDomainHostName']),
             new TwigFunction("getDomain", [$this, 'getDomain']),
@@ -270,27 +259,6 @@ class Extensions extends AbstractExtension
     public function getConfig(string $key, $default = null): bool|float|int|string|null
     {
         return $this->configurationService->get($key, $default);
-    }
-
-    public function generateTooltipPreviewForLinks(Environment $env, ?string $htmlContent): ?string
-    {
-        if ($htmlContent === null || strlen($htmlContent) === 0) {
-            return null;
-        }
-        $crawler = new Crawler($htmlContent);
-        $endpointFirstPart = preg_replace(
-            '/\/\{\w*\}/',
-            '',
-            $this->container->getRouteCollection()->get('app_documentation_show')->getPath()
-        );
-
-        $linksCrawler = $crawler->filterXPath("//a[starts-with(@href,'{$endpointFirstPart}')]");
-        /** @var \DOMElement $linkNode */
-        foreach ($linksCrawler as $linkNode) {
-            $this->generateHTMLTooltipForLink($env, $linkNode);
-        }
-
-        return $crawler->html();
     }
 
     private function generateHTMLTooltipForLink(Environment $env, \DOMElement $link)

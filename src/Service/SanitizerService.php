@@ -12,18 +12,6 @@ class SanitizerService
     public const STRICT = 1;
     public const LIBERAL = 2;
 
-    private const ALLOWED_HTML_SYMBOLS = [
-        '+' => '&#43;',
-        '=' => '&#61;',
-        '@' => '&#64;',
-        '>' => '&gt;',
-        '<' => '&lt;',
-        '&' => '&amp;',
-        '\'' => '&#039;',
-        '"' => '&#34;',
-        '`' => '&#96;',
-    ];
-
     public function __construct(
         private readonly HtmlSanitizerInterface $strictSanitizer,
         private readonly HtmlSanitizerInterface $liberalSanitizer
@@ -37,12 +25,15 @@ class SanitizerService
         }
 
         $sanitizer = $this->strictSanitizer;
+
+        // Sanitizer is removing < symbol We will allow it only if it is followed by a space.
+        $value = str_replace('< ', '&lt; ', $value);
+
         if ($sanitizeType === self::LIBERAL) {
             $sanitizer = $this->liberalSanitizer;
         }
-        $sanitizedValue = $sanitizer->sanitize($value);
-        // The sanitizer is doing HTML encode, we will reverse the process on some symbols.
-        return str_ireplace(array_values(self::ALLOWED_HTML_SYMBOLS), array_keys(self::ALLOWED_HTML_SYMBOLS), $sanitizedValue);
+
+        return $sanitizer->sanitize($value);
     }
 
     public function sanitizeEntityValue(?string $value, string $propertyName, AbstractEntity $entity): ?string
@@ -53,8 +44,8 @@ class SanitizerService
 
         if (in_array($propertyName, $entity->getLessPurifiedFields(), true)) {
             return $this->sanitizeValue($value, self::LIBERAL);
-        } else {
-            return $this->sanitizeValue($value);
         }
+
+        return $this->sanitizeValue($value, self::STRICT);
     }
 }

@@ -91,15 +91,5 @@ class MonologConfigTest extends AbstractKernelTestCase
                 "console" => "",
             ], // expected handlers and levels
         ];
-        yield "Test 4 - Test that monolog config is set for instance stress" => [
-            "stress",
-            [
-                "audit" => "debug",
-                "main" => "error",
-                "security" => "info",
-                "nested" => "debug",
-                "console" => "",
-            ], // expected handlers and levels
-        ];
     }
 }

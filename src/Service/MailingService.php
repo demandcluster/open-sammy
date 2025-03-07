@@ -31,7 +31,8 @@ class MailingService
         private readonly ParameterBagInterface $parameterBag,
         private readonly LoggerInterface $logger,
         private readonly Filesystem $filesystem,
-        private readonly MailTemplateRepository $mailTemplateRepository
+        private readonly MailTemplateRepository $mailTemplateRepository,
+        private readonly SanitizerService $sanitizerService
     ) {
     }
 
@@ -80,7 +81,7 @@ class MailingService
     private function replacePlaceholders(string $subject, string $message, User $user, array $extraPlaceholders = [], ?string $attachment = null): array
     {
         $find = ['[name]', '[surname]'];
-        $replace = [$user->getName(), $user->getSurname()];
+        $replace = [$this->sanitizerService->sanitizeValue($user->getName()), $this->sanitizerService->sanitizeValue($user->getSurname())];
         $urlName = 'app_login_password-reset-hash';
         $isUserAdmin = in_array('ROLE_ADMIN', $user->getRoles(), true);
         if ($isUserAdmin) {
