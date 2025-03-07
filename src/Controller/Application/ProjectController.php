@@ -276,7 +276,7 @@ class ProjectController extends AbstractController
         $user = $this->getUser();
         $page = $request->query->getInt('page', 1);
         $searchTerm = $request->query->get('searchTerm', '');
-        $archived = $request->query->getInt('archived', 0);
+        $archived = (int)$request->query->get('archived', 0);
         $projects = $projectRepository->findOptimized(searchTerm: $searchTerm, page: $page, archived: $archived, returnPaginated: true);
         $projectMkpi = $scoreService->getProjectScores(new \DateTime('now'), true, ...$projects->getResults());
 
