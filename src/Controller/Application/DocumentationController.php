@@ -54,8 +54,7 @@ class DocumentationController extends AbstractController
     public function saveDocumentation(
         Request $request,
         AssessmentStream $assessmentStream,
-        RemarkService $remarkService,
-        SanitizerService $sanitizer
+        RemarkService $remarkService
     ): JsonResponse {
         try {
             $currentUser = $this->getUser();
@@ -71,7 +70,7 @@ class DocumentationController extends AbstractController
             if ($form->isSubmitted() && $form->isValid()) {
                 /** @var DocumentationDTO $documentationDTO */
                 $documentationDTO = $form->getData();
-                $documentationDTO->setText($sanitizer->sanitizeValue($documentationDTO->getText()));
+                $documentationDTO->setText($documentationDTO->getText());
                 if ($documentationDTO->getRemarkType() === RemarkType::VALIDATION) {
                     $remarkService->saveValidationRemark($documentationDTO, $assessmentStream, $currentUser);
                 } else {

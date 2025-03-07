@@ -77,7 +77,7 @@ class GroupController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $this->getUser();
-            $group = $groupService->createGroup($sanitizer->sanitizeValue($group->getName()), $group->getParent());
+            $group = $groupService->createGroup($group->getName(), $group->getParent());
             $this->addFlash('success', $this->translator->trans('application.group.save_success', ['project' => trim("$group")], 'application'), true);
         } elseif ($form->isSubmitted() && !$form->isValid()) {
             $formError = $form->getErrors(true)->current();

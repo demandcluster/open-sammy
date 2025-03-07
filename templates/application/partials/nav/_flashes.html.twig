@@ -2,7 +2,7 @@
 <div id="notifications-container" class="d-none">
     {% for label, messages in app.flashes %}
         {% for message in messages %}
-            <input type="hidden" data-type="{{ label }}" value="{{ message }}" />
+            <input type="hidden" data-type="{{ label }}" value="{{ message|sanitize_html }}" />
         {% endfor %}
     {% endfor %}
 </div>
