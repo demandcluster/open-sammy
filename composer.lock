@@ -2850,16 +2850,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.6.1",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "d990688c91cedfb69753ffc2512727ec646df2ad"
+                "reference": "06c3b0bf2540338094575612f4a1778d0d2d5e94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d990688c91cedfb69753ffc2512727ec646df2ad",
-                "reference": "d990688c91cedfb69753ffc2512727ec646df2ad",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/06c3b0bf2540338094575612f4a1778d0d2d5e94",
+                "reference": "06c3b0bf2540338094575612f4a1778d0d2d5e94",
                 "shasum": ""
             },
             "require": {
@@ -2953,7 +2953,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-29T14:10:59+00:00"
+            "time": "2025-04-18T21:09:27+00:00"
         },
         {
             "name": "league/config",
@@ -4039,16 +4039,16 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "4.1.0",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "6ff18c3a8df3a945492f75ce455d77f7ad55dd5c"
+                "reference": "5f6d7410e5fd72cac1aa67d4f05f4fe664d01ba6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/6ff18c3a8df3a945492f75ce455d77f7ad55dd5c",
-                "reference": "6ff18c3a8df3a945492f75ce455d77f7ad55dd5c",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/5f6d7410e5fd72cac1aa67d4f05f4fe664d01ba6",
+                "reference": "5f6d7410e5fd72cac1aa67d4f05f4fe664d01ba6",
                 "shasum": ""
             },
             "require": {
@@ -4081,8 +4081,9 @@
                 "mitoteam/jpgraph": "^10.3",
                 "mpdf/mpdf": "^8.1.1",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "phpstan/phpstan": "^1.1",
-                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan": "^1.1 || ^2.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0 || ^2.0",
+                "phpstan/phpstan-phpunit": "^1.0 || ^2.0",
                 "phpunit/phpunit": "^10.5",
                 "squizlabs/php_codesniffer": "^3.7",
                 "tecnickcom/tcpdf": "^6.5"
@@ -4138,9 +4139,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
-                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/4.1.0"
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/4.2.0"
             },
-            "time": "2025-03-02T06:52:24+00:00"
+            "time": "2025-04-17T02:41:45+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -4923,16 +4924,16 @@
         },
         {
             "name": "scheb/2fa-backup-code",
-            "version": "v7.7.1",
+            "version": "v7.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-backup-code.git",
-                "reference": "f52e912460ba9fc6af4b451962176ce68146f456"
+                "reference": "62c6099b179903db5ab03b8059068cdb28659294"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-backup-code/zipball/f52e912460ba9fc6af4b451962176ce68146f456",
-                "reference": "f52e912460ba9fc6af4b451962176ce68146f456",
+                "url": "https://api.github.com/repos/scheb/2fa-backup-code/zipball/62c6099b179903db5ab03b8059068cdb28659294",
+                "reference": "62c6099b179903db5ab03b8059068cdb28659294",
                 "shasum": ""
             },
             "require": {
@@ -4966,22 +4967,22 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-backup-code/tree/v7.7.1"
+                "source": "https://github.com/scheb/2fa-backup-code/tree/v7.9.0"
             },
-            "time": "2025-03-20T08:56:30+00:00"
+            "time": "2025-04-20T08:27:40+00:00"
         },
         {
             "name": "scheb/2fa-bundle",
-            "version": "v7.7.1",
+            "version": "v7.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-bundle.git",
-                "reference": "9b241074d140c54e0f81742bc089edd8a0efd62b"
+                "reference": "793acc8e9c5f78989d23489205afa6e852c9982b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-bundle/zipball/9b241074d140c54e0f81742bc089edd8a0efd62b",
-                "reference": "9b241074d140c54e0f81742bc089edd8a0efd62b",
+                "url": "https://api.github.com/repos/scheb/2fa-bundle/zipball/793acc8e9c5f78989d23489205afa6e852c9982b",
+                "reference": "793acc8e9c5f78989d23489205afa6e852c9982b",
                 "shasum": ""
             },
             "require": {
@@ -5034,22 +5035,22 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-bundle/tree/v7.7.1"
+                "source": "https://github.com/scheb/2fa-bundle/tree/v7.9.0"
             },
-            "time": "2025-03-24T10:50:27+00:00"
+            "time": "2025-04-20T11:32:24+00:00"
         },
         {
             "name": "scheb/2fa-google-authenticator",
-            "version": "v7.7.1",
+            "version": "v7.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-google-authenticator.git",
-                "reference": "1d67aa4585c706046c7bedef3c6955d85664364c"
+                "reference": "01a446eb68a76c3d0528a190029afa5e6ce5c384"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-google-authenticator/zipball/1d67aa4585c706046c7bedef3c6955d85664364c",
-                "reference": "1d67aa4585c706046c7bedef3c6955d85664364c",
+                "url": "https://api.github.com/repos/scheb/2fa-google-authenticator/zipball/01a446eb68a76c3d0528a190029afa5e6ce5c384",
+                "reference": "01a446eb68a76c3d0528a190029afa5e6ce5c384",
                 "shasum": ""
             },
             "require": {
@@ -5084,22 +5085,22 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-google-authenticator/tree/v7.7.1"
+                "source": "https://github.com/scheb/2fa-google-authenticator/tree/v7.9.0"
             },
-            "time": "2025-03-20T08:56:30+00:00"
+            "time": "2025-04-20T08:38:44+00:00"
         },
         {
             "name": "scheb/2fa-trusted-device",
-            "version": "v7.7.1",
+            "version": "v7.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-trusted-device.git",
-                "reference": "fd73c5f4cfcfe0aa073e9aefbcadebadc2d31491"
+                "reference": "bf2f79c16068b2e04e4a93d3d249114c5c1bba34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-trusted-device/zipball/fd73c5f4cfcfe0aa073e9aefbcadebadc2d31491",
-                "reference": "fd73c5f4cfcfe0aa073e9aefbcadebadc2d31491",
+                "url": "https://api.github.com/repos/scheb/2fa-trusted-device/zipball/bf2f79c16068b2e04e4a93d3d249114c5c1bba34",
+                "reference": "bf2f79c16068b2e04e4a93d3d249114c5c1bba34",
                 "shasum": ""
             },
             "require": {
@@ -5135,9 +5136,9 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-trusted-device/tree/v7.7.1"
+                "source": "https://github.com/scheb/2fa-trusted-device/tree/v7.9.0"
             },
-            "time": "2025-03-23T09:49:33+00:00"
+            "time": "2025-04-19T20:46:56+00:00"
         },
         {
             "name": "scienta/doctrine-json-functions",
@@ -11843,16 +11844,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.23",
+            "version": "1.12.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "29201e7a743a6ab36f91394eab51889a82631428"
+                "reference": "338b92068f58d9f8035b76aed6cf2b9e5624c025"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/29201e7a743a6ab36f91394eab51889a82631428",
-                "reference": "29201e7a743a6ab36f91394eab51889a82631428",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/338b92068f58d9f8035b76aed6cf2b9e5624c025",
+                "reference": "338b92068f58d9f8035b76aed6cf2b9e5624c025",
                 "shasum": ""
             },
             "require": {
@@ -11897,7 +11898,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-23T14:57:32+00:00"
+            "time": "2025-04-16T13:01:53+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
