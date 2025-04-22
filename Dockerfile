@@ -27,7 +27,7 @@ RUN set -eux; \
   apt-get install -y --no-install-recommends zlib1g-dev libxml2-dev libbz2-dev libzip-dev libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libfreetype6-dev apache2-dev build-essential ; \
   rm -rf /var/lib/apt/lists/*; \
   docker-php-ext-configure gd --with-jpeg --with-webp --with-xpm --with-freetype ; \
-  docker-php-ext-install zip pdo_mysql gd xml bz2 intl opcache sockets ; \
+  docker-php-ext-install zip pdo_mysql gd xml bz2 intl opcache sockets tokenizer ; \
   pecl install -o -f redis; \
   echo "extension=redis.so" >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-redis.ini; \
 # reset apt-mark's "manual" list so that "purge --auto-remove" will remove all build dependencies
