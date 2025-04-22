@@ -7,7 +7,7 @@ FROM php:8.2-apache
 # persistent / runtime deps
 RUN set -eux; \
   apt-get update; \
-  apt-get install -y --no-install-recommends git cron tzdata locales ; \
+  apt-get install -y --no-install-recommends git cron tzdata locales ibmagic-dev file ; \
 	rm -rf /var/lib/apt/lists/*
 
 RUN cp /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime && \
@@ -18,6 +18,7 @@ sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 sed -i 's/# nl_BE.UTF-8 UTF-8/nl_BE.UTF-8 UTF-8/' /etc/locale.gen && \
 sed -i 's/# fr_BE.UTF-8 UTF-8/fr_BE.UTF-8 UTF-8/' /etc/locale.gen && \
 locale-gen
+RUN apt-get update && apt-get install -y libmagic-dev file
 
 # build and configure php/apache modules
 RUN set -eux; \
@@ -27,7 +28,7 @@ RUN set -eux; \
   apt-get install -y --no-install-recommends zlib1g-dev libxml2-dev libbz2-dev libzip-dev libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libfreetype6-dev apache2-dev build-essential ; \
   rm -rf /var/lib/apt/lists/*; \
   docker-php-ext-configure gd --with-jpeg --with-webp --with-xpm --with-freetype ; \
-  docker-php-ext-install zip pdo_mysql gd xml bz2 intl opcache sockets tokenizer ; \
+  docker-php-ext-install zip pdo_mysql gd xml bz2 intl opcache sockets ; \
   pecl install -o -f redis; \
   echo "extension=redis.so" >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-redis.ini; \
 # reset apt-mark's "manual" list so that "purge --auto-remove" will remove all build dependencies
