@@ -205,6 +205,14 @@ class MailingService
             $mail->Body = $message;
             $mail->Subject = $subject;
 
+            $mail->SMTPOptions = [
+                                    'ssl' => [
+                                        'verify_peer' => false,
+                                        'verify_peer_name' => false,
+                                        'allow_self_signed' => true
+                                    ]
+                                ];
+
             if ($attachmentFile !== null) {
                 $roodDir = $this->parameterBag->get('kernel.project_dir');
                 $attachmentPath = "$roodDir/$attachmentFile";
