@@ -185,8 +185,8 @@ class MailingService
         string $subject,
         string $message,
         ?string $attachmentFile = null,
-        string $from = 'sammy@codific.com',
-        string $fromName = 'SAMMY Mailing System'
+        string $from = 'support@demandcluster.com',
+        string $fromName = 'OpenSAMMY Mailing System'
     ): bool {
         try {
             $mail = new PHPMailer(true);
