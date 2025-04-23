@@ -8,6 +8,8 @@ else
   MY_PUID=${PUID}
 fi
 
+echo "ServerName $SMTP_HOST_NAME" >> /etc/apache2/apache2.conf
+
 SYMFONY_CONSOLE=/var/www/bin/console
 if [[ -f "$SYMFONY_CONSOLE" ]]; then
   php ${SYMFONY_CONSOLE} cache:clear
